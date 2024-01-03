@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for tens in range(10):
-    for ones in range(tens + 1, 10):
-        print("{}{}".format(tens, ones), end=", " if (tens, ones) != (8, 9) else "\n")
+for i in range(10):
+    for j in range(i + 1, 10):
+        print("{}{}".format(i, j), end=", " if (i, j) != (8, 9) else "\n")
