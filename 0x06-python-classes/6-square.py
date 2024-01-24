@@ -17,11 +17,11 @@ class Square:
 
         Parameters:
         - size (int, optional): The size of the square. Defaults to 0.
-        - position (tuple, optional): The position of the square. Defaults to (0, 0).
+        - position (tuple, optional): The position of the square.
 
         Raises:
-        - TypeError: If size is not an integer or if position is not a tuple of 2 positive integers.
-        - ValueError: If size is less than 0 or if position contains non-positive integers.
+        -TypeError:If size isn't int or if pos isn't tuple of 2 +ve ints.
+        -ValueError:If size is less than 0 or if pos contains non-positive ints
         """
         self.size = size
         self.position = position
@@ -56,9 +56,9 @@ class Square:
         """
         if value is not None:
             if not isinstance(value, tuple) or len(value) != 2:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple of 2 +ve ints")
             elif not all(isinstance(coord, int) and coord >= 0 for coord in value):
-                raise ValueError("position must be a tuple of 2 positive integers")
+                raise ValueError("position must be a tuple of 2 +ve ints")
 
     @property
     def size(self):
