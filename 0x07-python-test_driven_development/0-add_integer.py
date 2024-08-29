@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for add_integer"""
 
+
 def add_integer(a, b=98):
     """
     Adds two integers.
@@ -24,7 +25,7 @@ def add_integer(a, b=98):
     # Cast to integers if they are floats and perform the addition
     return int(a) + int(b)
 
+
 if __name__ == "__main__":
     import doctest
     doctest.testfile("tests/0-add_integer.txt")
-
