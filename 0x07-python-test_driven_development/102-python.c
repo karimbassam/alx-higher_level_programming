@@ -11,6 +11,8 @@
  */
 void print_python_string(PyObject *p)
 {
+	wchar_t *w_str;
+	
 	wprintf(L"[.] string object info\n");
 	if (strcmp(p->ob_type->tp_name, "str"))
 	{
@@ -22,5 +24,14 @@ void print_python_string(PyObject *p)
 	else
 		wprintf(L" type: compact unicode object\n");
 	wprintf(L" length: %lu\n", PyUnicode_GET_LENGTH(p));
-	wprintf(L" value: %ls\n", PyUnicode_AS_UNICODE(p));
+	
+	w_str = PyUnicode_AsWideCharString(p, NULL);
+    if (w_str == NULL)
+    {
+        wprintf(L"  [ERROR] Cannot convert to wide char string\n");
+        return;
+    }
+
+    wprintf(L"  value: %ls\n", w_str);
+    PyMem_Free(w_str);
 }
