@@ -66,8 +66,9 @@ class Rectangle:
             return "\n".join([symbol * self.__width] * self.__height)
         elif isinstance(symbol, list):
             rows = []
-            for _ in range(self.__height):
-                row = "".join(str(item) for item in symbol[:self.__width])
+            symbol_length = len(symbol)
+            for i in range(self.__height):
+                row = "".join(str(symbol[j % symbol_length]) for j in range(self.__width))
                 rows.append(row)
             return "\n".join(rows)
         else:
