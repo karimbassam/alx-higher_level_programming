@@ -3,9 +3,9 @@
 Define a class Rectangle with private attributes width and height.
 """
 
+
 class Rectangle:
     """Class Rectangle that defines a rectangle by width and height."""
-
 
     def __init__(self, width=0, height=0):
         self.width = width
