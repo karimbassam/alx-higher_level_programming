@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Define a class Rectangle with private attributes width and height,
-methods for area, perimeter, string representation, and custom deletion message.
+methods for area, perimeter, string representation and custom deletion message
 """
 
 
