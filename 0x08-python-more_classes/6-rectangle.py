@@ -3,6 +3,7 @@
 Define a class Rectangle
 """
 
+
 class Rectangle:
     """Define a Rectangle class with width and height attributes"""
 
@@ -66,4 +67,3 @@ class Rectangle:
         """Print a message when an instance is deleted"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
