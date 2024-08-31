@@ -56,23 +56,10 @@ class Rectangle:
 
     def __str__(self):
         """Return a string representation of the rectangle."""
-        if self.__width == 0 or self.__height == 0:
+        if not self.width or not self.height:
             return ""
-        symbol = Rectangle.print_symbol
-        if isinstance(symbol, str):
-            return "\n".join([symbol * self.__width] * self.__height)
-        elif isinstance(symbol, int):
-            symbol = str(symbol)
-            return "\n".join([symbol * self.__width] * self.__height)
-        elif isinstance(symbol, list):
-            rows = []
-            symbol_length = len(symbol)
-            for i in range(self.__height):
-                row = "".join(str(symbol[j % symbol_length]) for j in range(self.__width))
-                rows.append(row)
-            return "\n".join(rows)
-        else:
-            raise TypeError("print_symbol must be a string, integer, or list")
+        return ((str(self.print_symbol) * self.width + "\n") *
+                self.height)[:-1]
 
     def __repr__(self):
         """Return a string representation of the rectangle for eval()."""
