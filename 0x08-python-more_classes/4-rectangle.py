@@ -4,6 +4,7 @@ Define a class Rectangle with private attributes width and height,
 methods for area, perimeter, and string representation.
 """
 
+
 class Rectangle:
     """Class Rectangle that defines a rectangle by width and height."""
 
@@ -58,7 +59,4 @@ class Rectangle:
 
     def __repr__(self):
         """Return a string representation of the rectangle for eval()."""
-        return (
-            f"Rectangle(width={self.__width}, height={self.__height})"
-        )
-
+        return f"Rectangle({self.__width}, {self.__height})"
