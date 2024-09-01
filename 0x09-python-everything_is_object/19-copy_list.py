@@ -2,6 +2,5 @@
 """Funtion to copy a list"""
 
 
-def copy_list(l):
-    return l[:]
-
+def copy_list(deflist):
+    return (deflist.copy())
